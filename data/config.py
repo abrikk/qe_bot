@@ -8,3 +8,8 @@ ADMINS = env.list("ADMINS")  # Тут у нас будет список из а�
 IP = env.str("ip")  # Тоже str, но для айпи адреса хоста
 CHAT_ID = -1001522695149
 
+DB_USER = env.str("DB_USER")
+DB_PASS = env.str("DB_PASS")
+DB_HOST = env.str("DB_HOST")
+DB_NAME = env.str("DB_NAME")
+
