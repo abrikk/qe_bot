@@ -1,8 +1,6 @@
 import asyncpg
 from aiogram import types
 from aiogram.dispatcher.filters import Command
-from aiogram.utils import emoji
-from aiogram.utils.markdown import hbold
 
 from loader import dp, db
 
