@@ -1,5 +1,6 @@
 import asyncpg
 from aiogram import types
+from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Command
 
 from loader import dp, db
@@ -19,8 +20,7 @@ async def bot_start(message: types.Message):
     access = user.get('access')
     count_users = await db.count_users()
 
-    if access == 777:
-        await message.answer(f"Информация для админа:\n"
-                             f"Пользователей в боте {count_users}")
+    if access == 0:
+        await message.answer(f"Всего пользователей в боте: {count_users}")
     else:
-        await message.answer_sticker("CAACAgIAAxkBAAENAAHEYbSUNSxo--kfchVOOEHMYGKDMeoAAi8RAAKxRYFJmiYyNXTVuccjBA")
+        await message.answer_sticker('CAACAgIAAxkBAAEM6OFhrN9vdQi7VP6Z3gUWSraCzsjQwQACLxEAArFFgUmaJjI1dNW5xyIE')

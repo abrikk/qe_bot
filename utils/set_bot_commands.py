@@ -7,7 +7,7 @@ async def set_default_commands(dp):
     usercommands = [
         BotCommand(command="start", description="Запустить бота"),
         BotCommand(command="help", description="Справка по использованию бота"),
-        BotCommand(command="quadratic_equation", description="Решить квадратное уравнение"),
+        BotCommand(command="statistics", description="Посмотреть статистику бота."),
         BotCommand(command="test", description="Начать тестирование")
     ]
     await bot.set_my_commands(usercommands, scope=BotCommandScopeDefault())
@@ -15,12 +15,11 @@ async def set_default_commands(dp):
     admin_commands = [
         BotCommand(command="start", description="Запустить бота"),
         BotCommand(command="help", description="Справка по использованию бота"),
-        BotCommand(command="quadratic_equation", description="Решить квадратное уравнение"),
-        BotCommand(command="test", description="Начать тестирование"),
+        BotCommand(command="statistics", description="Посмотреть статистику бота."),
         BotCommand(command="show_state", description="Показать текущее состояние"),
+        BotCommand(command="test", description="Начать тестирование"),
         BotCommand(command="add_admin", description="Добавить админа"),
         BotCommand(command="remove_admin", description="Удалить админа"),
-        BotCommand(command="statistics", description="Посмотреть статистику бота.")
     ]
     await bot.set_my_commands(admin_commands, scope=BotCommandScopeChat(chat_id=569356638))
 
